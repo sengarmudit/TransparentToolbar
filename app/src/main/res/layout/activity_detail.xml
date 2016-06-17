@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.ostopd.transparenttoolbar.views.views.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/activity_detail_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/activity_detail_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_below="@id/activity_detail_toolbar"
+            android:background="?colorPrimary"
+            android:elevation="4dp">
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_titles_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/activity_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="2"
+                    android:textColor="#FFF"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/activity_detail_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_title"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="The best subtitle"
+                    android:textColor="#FFF" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/activity_detail_fab"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/activity_detail_toolbar"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="-26dp"
+            android:background="@drawable/ripple_round"
+            android:elevation="4dp"
+            android:src="@drawable/ic_file_download_white_36dp"
+            android:stateListAnimator="@anim/fab_animation"
+            android:transitionName="fab" />
+
+        <FrameLayout
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_detail_toolbar"
+            android:layout_gravity="center"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_detail_book_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_detail_main_container"
+            android:background="#EEEEEE"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/activity_detail_summary_title"
+                style="@style/OpenLibraHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Summary" />
+
+            <TextView
+                android:id="@+id/activity_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/lorem" />
+
+            <TextView
+                android:id="@+id/activity_detail_rating_title"
+                style="@style/OpenLibraHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Rating" />
+
+            <TextView
+                android:id="@+id/activity_detail_rating_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="7.9"
+                android:textAllCaps="true"
+                android:textSize="50sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.ostopd.transparenttoolbar.views.views.ObservableScrollView>
+

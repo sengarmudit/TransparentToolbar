@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_book_container"
+    android:layout_width="196dp"
+    android:layout_height="248dp"
+    android:orientation="vertical"
+    android:scaleX="0"
+    android:scaleY="0">
+
+    <ImageView
+        android:id="@+id/item_book_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/book_without_palette"
+        android:scaleType="centerCrop"
+        android:transitionName="bookCover" />
+
+    <RelativeLayout
+        android:id="@+id/item_book_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/book_without_palette"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/item_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:lines="1"
+            android:textColor="@color/text_without_palette"
+            android:textSize="16sp"
+            tools:text="test" />
+
+        <TextView
+            android:id="@+id/item_book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_book_title"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/text_without_palette"
+            android:textSize="15sp"
+            tools:text="test" />
+
+    </RelativeLayout>
+</LinearLayout>
